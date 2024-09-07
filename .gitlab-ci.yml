@@ -10,6 +10,7 @@ repo_pull_sync:
     - git config --global user.name "${GITLAB_USER_NAME}"
     - git config --global user.email "${GITLAB_USER_EMAIL}"
   script:
+    - docker system prune -a -f
     - git checkout $CI_DEFAULT_BRANCH
     - git pull
     - git remote remove upstream || true
