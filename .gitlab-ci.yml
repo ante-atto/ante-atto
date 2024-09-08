@@ -1,5 +1,5 @@
-repo_pull_sync:
-  image: anteatto/repo-mirror-pull:latest
+gitlab-executor:
+  image: anteatto/gitlab-executor:latest
   rules:
     - if: '$CI_PIPELINE_SOURCE == "schedule"'
     - if: '$CI_PIPELINE_SOURCE == "push"'
